@@ -14,22 +14,22 @@ var resvs = require('./routes/resvs');
 
 var app = express();
 
-// var DB_URI_STRING = (process.env.MONGOLAB_URI || 'mongodb://quadrastudio:quadrastudio2014@ds035573.mongolab.com:35573/heroku_7t267lkz');
+var DB_URI_STRING = 'mongodb://heroku_z16d83zr:heroku_z16d83zr@ds011024.mlab.com:11024/heroku_z16d83zr';
 
-// var connect = function() {
-//   var options = {
-//     server: {
-//       socketOptions: {
-//         keepAlive: 1
-//       }
-//     }
-//   };
-//   mongoose.connect(DB_URI_STRING, options);
-// };
-// connect();
+var connect = function() {
+  var options = {
+    server: {
+      socketOptions: {
+        keepAlive: 1
+      }
+    }
+  };
+  mongoose.connect(DB_URI_STRING, options);
+};
+connect();
 
-// mongoose.connection.on('error', console.error);
-// mongoose.connection.on('disconnected', connect);
+mongoose.connection.on('error', console.error);
+mongoose.connection.on('disconnected', connect);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
