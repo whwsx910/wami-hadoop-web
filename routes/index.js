@@ -17,8 +17,16 @@ router.get('/wami', function(req, res, next) {
   });
 });
 
-router.get('/tasklist', function(req, res, next) {
-  res.status(200).render('tasklist', {
+router.get('/dashboard', function(req, res, next) {
+  res.status(200).render('dashboard', {
+    title: "Task list",
+    desc: "Task list"
+  });
+});
+
+
+router.get('/imageprocess', function(req, res, next) {
+  res.status(200).render('imageprocess', {
     title: "Task list",
     desc: "Task list"
   });
