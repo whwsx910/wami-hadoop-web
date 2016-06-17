@@ -19,6 +19,7 @@
     "gps2zip": "^1.1.0",
     "mongoose": "^4.0.5",
     "morgan": "~1.5.3",
+    "multer": "^1.1.0",
     "sendgrid": "^1.9.1",
     "serve-favicon": "~2.2.1",
     "underscore-node": "^0.1.2"
